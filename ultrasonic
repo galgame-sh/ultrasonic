@@ -10,12 +10,12 @@ int main()
         usensor.start();
         wait_ms(500); 
         dist=usensor.get_dist_cm();
-        if (dist >=7 and dist>12)
+        if (dist >=9 and dist<15)
         {
             led1 = 1;
             wait(3);
         }
-        if (dist <7 and dist >=3)
+        if (dist <9 and dist >=4)
         {
             led1 = !led1;
             wait(0.5);
@@ -23,7 +23,7 @@ int main()
             wait(0.5);
             led1 = !led1;
         }
-        if (dist <3)
+        if (dist <4)
         {
             led1 = !led1;
             wait(0.1);
